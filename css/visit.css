@@ -1,0 +1,76 @@
+body {
+    height: 1000px;
+    background-image: url('C:\\Users\\User\\Desktop\\FINAL-web\\img\\paris4.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#visit {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.navbar{
+    transition: all 0.5s;
+}
+
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link{
+    transition: all 0.2s;
+    position: relative;
+}
+
+
+.nav-link::after{
+    content: '';
+    height: 2px;
+    width: 50px;
+    background-color: #4aa1ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.nav-link:hover::after{
+    opacity: 1;
+}
+
+
+.sub_title::after {
+    content: '';
+    display: block;
+    width: 250px; 
+    height: 2px; 
+    background-color: #4aa1ff; 
+    margin-top: 8px; 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}

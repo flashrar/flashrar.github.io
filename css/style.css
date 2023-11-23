@@ -1,0 +1,58 @@
+body{
+    height: 1000px;
+    overflow-x: hidden;
+    
+}
+
+.navbar{
+    transition: all 0.5s;
+}
+
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link{
+    transition: all 0.2s;
+    position: relative;
+}
+
+
+.nav-link::after{
+    content: '';
+    height: 2px;
+    width: 50px;
+    background-color: #4aa1ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.nav-link:hover::after{
+    opacity: 1;
+}
+
+.custom-accordion{
+    max-width: 1000px; /* Adjust the value according to your needs */
+    margin: 0 auto; /* Center the container */
+    margin-bottom: 80px;
+}
+
+.sub_title::after {
+    content: '';
+    display: block;
+    width: 200px; /* Adjust the width of the line as needed */
+    height: 2px; /* Adjust the height/thickness of the line as needed */
+    background-color: #007BFF; /* Blue color */
+    margin-top: 8px; /* Adjust the distance between the text and the line */
+}
+
+
+.center{
+    height: 600px;
+    width: 850px;
+
+}
